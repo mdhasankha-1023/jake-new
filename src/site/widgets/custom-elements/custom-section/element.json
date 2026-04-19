@@ -1,0 +1,22 @@
+{
+  "$schema": "https://dev.wix.com/wix-cli/schemas/custom-element.json",
+  "id": "e47e77cd-e043-4ccc-8b25-88d25cf0cf75",
+  "name": "custom section",
+  "width": {
+    "defaultWidth": 450,
+    "allowStretch": true
+  },
+  "height": {
+    "defaultHeight": 250
+  },
+  "installation": {
+    "autoAddToSite": true
+  },
+  "presets": [
+    {
+      "id": "f8c4e4f5-820a-4b2f-95b4-60aab46826ca",
+      "thumbnailUrl": "../../../../assets/custom-section/thumbnail.png"
+    }
+  ]
+}
+
