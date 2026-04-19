@@ -1,0 +1,16 @@
+.wix
+node_modules
+dist
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Misc
+.DS_Store
+out
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore

@@ -1,0 +1,5 @@
+{
+  "$schema": "https://dev.wix.com/wix-cli/schemas/wix-config.json",
+  "appId": "fb72793c-5263-4556-8dec-06435fb5c3a3",
+  "projectId": "my-custom-apps"
+}

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&family=Poppins:wght@400&display=swap');
+
+.root {
+  width: 100%;
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 3rem 1.5rem;
+}
+
+.mainHeading {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sliderWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cardsGrid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 20px;
+  width: 100%;
+}
+
+.card {
+  background-color: #f8f5f0;
+  border-radius: 10px;
+  /* Desktop padding remains spacious */
+  padding: 35px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cardIcon {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.cardTitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #0E1C2F;
+  margin: 0;
+}
+
+.cardDesc {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* DOT INDICATORS */
+.dotsContainer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d1d1d1;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.activeDot {
+  background-color: #0E1C2F;
+  width: 25px;
+  border-radius: 10px;
+}
+
+/* TABLET VIEW */
+@media (max-width: 900px) {
+  .cardsGrid { 
+    grid-template-columns: repeat(2, 1fr) !important; 
+  }
+}
+
+/* MOBILE VIEW - FULL WIDTH */
+@media (max-width: 600px) {
+  .dotsContainer { 
+    display: flex; 
+  }
+
+  .sliderWrapper {
+    overflow: hidden; 
+  }
+
+  .cardsGrid {
+    display: flex !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    gap: 0px !important; /* No gap for seamless 100% width transition */
+    margin: 0 !important;
+    padding: 0 !important; /* Removed horizontal padding to allow 100% width */
+  }
+
+  .cardsGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    scroll-snap-align: start;
+    margin: 0 !important; 
+    box-sizing: border-box;
+    
+    /* Requested padding: 12px Top/Bottom, 25px Left/Right */
+    padding: 12px 25px !important; 
+    
+    box-shadow: none !important;
+    border-radius: 0; /* Optional: 100% width usually looks better without radius on mobile */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease;
+  }
+
+  .cardIcon {
+    width: 60px; /* Slightly smaller to fit the 12px padding better */
+    height: 60px;
+    margin-top: 5px;
+  }
+}
